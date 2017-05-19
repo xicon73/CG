@@ -1,0 +1,102 @@
+<scene>
+  <group>
+    <!-- Sun -->
+    <group>
+      <models>
+        <model file="sphere.3d" texture="textures/sun.jpg"/>
+      </models>
+    </group>
+    <!-- Mercury -->
+    <group>
+        <rotate y="1"/>
+        <translate x="3"/>
+        <scale x="0.2" y="0.2" z="0.2"/>
+        <models>
+            <model file="sphere.3d" texture="textures/mercury.jpg"/>
+        </models>
+    </group>
+    <!-- Venus -->
+    <group>
+        <rotate y="1"/>
+        <translate x="4"/>
+        <scale x="0.3" y="0.3" z="0.3"/>
+        <models>
+            <model file="sphere.3d" texture="textures/venus.jpg"/>
+        </models>
+    </group>
+    <!-- Earth -->
+    <group>
+        <rotate y="1"/>
+        <translate x="6"/>
+        <scale x="0.4" y="0.4" z="0.4"/>
+        <models>
+            <model file="sphere.3d" texture="textures/earth.jpg"/>
+        </models>
+        <!-- Moon -->
+        <group>
+          <rotate y="1"/>
+          <translate x="2"/>
+          <scale x="0.2" y="0.2" z="0.2"/>
+          <models>
+            <model file="sphere.3d" texture="textures/moon.jpg"/>
+          </models>
+        </group>
+    </group>
+    <!-- Mars -->
+    <group>
+        <rotate y="1"/>
+        <translate x="8"/>
+        <scale x="0.3" y="0.3" z="0.3"/>
+        <models>
+            <model file="sphere.3d" texture="textures/mars.jpg"/>
+        </models>
+    </group>
+
+    <!-- Astheroid field -->
+    <group repeat="200">
+        <rotate angleMin="0" angleMax="360" y="1"/>
+        <translate xMin="9.5" xMax="11" yMin="-0.5" yMax="0.5" />
+        <scale xMin="0.01" xMax="0.05" yMin="0.01" yMax="0.05" zMin="0.01" zMax="0.05"/>
+        <models>
+            <model file="sphere.3d" texture="textures/astheroid.jpg"/>
+        </models>
+    </group>
+
+    <!-- Jupiter -->
+    <group>
+        <rotate y="1"/>
+        <translate x="12"/>
+        <scale x="0.6" y="0.6" z="0.6"/>
+        <models>
+            <model file="sphere.3d" texture="textures/jupiter.jpg"/>
+        </models>
+    </group>
+    <!-- Saturn -->
+    <group>
+        <rotate y="1"/>
+        <translate x="15"/>
+        <scale x="0.5" y="0.5" z="0.5"/>
+        <models>
+            <model file="sphere.3d" texture="textures/saturn.jpg"/>
+        </models>
+    </group>
+    <!-- Uranus -->
+    <group>
+        <rotate y="1"/>
+        <translate x="17"/>
+        <scale x="0.4" y="0.4" z="0.4"/>
+        <models>
+            <model file="sphere.3d" texture="textures/uranus.jpg"/>
+        </models>
+    </group>
+    <!-- Neptune -->
+    <group>
+        <rotate y="1"/>
+        <translate x="19"/>
+        <scale x="0.4" y="0.4" z="0.4"/>
+        <models>
+            <model file="sphere.3d" texture="textures/neptune.jpg"/>
+        </models>
+    </group>
+  </group>
+</scene>

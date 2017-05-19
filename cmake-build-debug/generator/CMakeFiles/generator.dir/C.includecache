@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/afonso/Documents/assignment/generator/generator.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+model.h
+/Users/afonso/Documents/assignment/generator/model.h
+
+/Users/afonso/Documents/assignment/generator/model.c
+model.h
+/Users/afonso/Documents/assignment/generator/model.h
+
+/Users/afonso/Documents/assignment/generator/model.h
+assert.h
+-
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
