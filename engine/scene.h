@@ -19,11 +19,17 @@
 
 #define STRING_MAX_SIZE 128
 
+struct point {
+    double x, y, z;
+    struct point *next;
+};
+
 struct transformation {
     char type;  // 'r' = rotate, 's' = scale, 't' = translate
 
     struct rotation {
         double angle, x, y, z;
+        int time;
     } rotation;
 
     struct scale {
@@ -31,7 +37,9 @@ struct transformation {
     } scale;
 
     struct translation {
-        double x, y, z;
+        double time, x, y, z;
+        int npoints;
+        struct point *points;
     } translation;
 
     struct transformation *next;

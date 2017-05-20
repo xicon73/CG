@@ -11,10 +11,11 @@
 #include <GL/glew.h>
 #include <GL/glut.h>
 #endif
-
 #include <IL/il.h>
-
+#include <math.h>
 #include "scene.h"
+
+extern double TIME;
 
 void render_group(struct group *group);
 

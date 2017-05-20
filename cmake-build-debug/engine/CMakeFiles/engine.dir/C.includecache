@@ -77,6 +77,8 @@ GL/glut.h
 -
 IL/il.h
 -
+math.h
+-
 scene.h
 /Users/afonso/Documents/assignment/engine/scene.h
 

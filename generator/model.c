@@ -38,8 +38,8 @@ struct vertex ellipsoid_param(double r1, double r2, double r3,
     double ny = sin(theta);
     double nz = cos(theta) * cos(phi);
 
-    double s = 0.5 + atan2(nz, nx) / (2 * M_PI);
-    double t = 0.5 - asin(ny) / M_PI;
+    double s = (-atan2(-px, pz) + M_PI) / (2 * M_PI);
+    double t = ((-py / r2) + 1)/2;
 
     return (struct vertex) { px, py, pz, nx, ny, nz, s, t };
 }

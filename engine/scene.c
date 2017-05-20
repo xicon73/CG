@@ -26,8 +26,9 @@ struct rotation rotation_load(ezxml_t node) {
     double x = number_load(node, "x", "xMin", "xMax", 0);
     double y = number_load(node, "y", "yMin", "yMax", 0);
     double z = number_load(node, "z", "zMin", "zMax", 0);
+    double time = number_load(node, "time", "timeMin", "timeMax", 0);
 
-    return (struct rotation) { angle, x, y, z };
+    return (struct rotation) { angle, x, y, z, time };
 }
 
 struct scale scale_load(ezxml_t node) {
@@ -38,12 +39,29 @@ struct scale scale_load(ezxml_t node) {
     return (struct scale) { x, y, z };
 }
 
+struct point *point_load(ezxml_t node, int *npoints) {
+    if (!node) return NULL;
+
+    struct point *p = calloc(1, sizeof(struct point));
+    (*npoints)++;
+
+    p->x = number_load(node, "x", "xMin", "xMax", 0);
+    p->y = number_load(node, "y", "yMin", "yMax", 0);
+    p->z = number_load(node, "z", "zMin", "zMax", 0);
+    p->next = point_load(node->next, npoints);
+
+    return p;
+}
+
 struct translation translation_load(ezxml_t node) {
+    double time = number_load(node, "time", "timeMin", "timeMax", 0);
     double x = number_load(node, "x", "xMin", "xMax", 0);
     double y = number_load(node, "y", "yMin", "yMax", 0);
     double z = number_load(node, "z", "zMin", "zMax", 0);
+    int npoints = 0;
+    struct point *points = point_load(ezxml_child(node, "point"), &npoints);
 
-    return (struct translation) { x, y, z };
+    return (struct translation) { time, x, y, z, npoints, points };
 }
 
 struct transformation *transformations_load(ezxml_t node) {

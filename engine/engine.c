@@ -62,6 +62,7 @@ void render_scene() {
     // Reset texture loading
     glBindTexture(GL_TEXTURE_2D, 0);
     glutSwapBuffers();
+    TIME += 0.001;
 }
 
 // Mouse and keyborad functions
