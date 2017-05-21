@@ -42,7 +42,7 @@ if (APPLE)
     include_directories(/usr/local/include)
 endif(APPLE)
 
-add_executable(${PROJECT_NAME} engine.c camera.c scene.c render.c ezxml.c)
+add_executable(${PROJECT_NAME} engine.c scene.c render.c ezxml.c)
 
 if (WIN32)
     target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} glut32 glew32 DevIL m)

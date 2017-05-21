@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
+RM = /home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/afonso/Documents/assignment
+CMAKE_SOURCE_DIR = "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/afonso/Documents/assignment/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include engine/CMakeFiles/engine.dir/depend.make
@@ -59,16 +59,16 @@ include engine/CMakeFiles/engine.dir/flags.make
 
 engine/CMakeFiles/engine.dir/engine.c.o: engine/CMakeFiles/engine.dir/flags.make
 engine/CMakeFiles/engine.dir/engine.c.o: ../engine/engine.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object engine/CMakeFiles/engine.dir/engine.c.o"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/engine.c.o   -c /Users/afonso/Documents/assignment/engine/engine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object engine/CMakeFiles/engine.dir/engine.c.o"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/engine.c.o   -c "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/engine.c"
 
 engine/CMakeFiles/engine.dir/engine.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/engine.dir/engine.c.i"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/afonso/Documents/assignment/engine/engine.c > CMakeFiles/engine.dir/engine.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/engine.c" > CMakeFiles/engine.dir/engine.c.i
 
 engine/CMakeFiles/engine.dir/engine.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/engine.dir/engine.c.s"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/afonso/Documents/assignment/engine/engine.c -o CMakeFiles/engine.dir/engine.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/engine.c" -o CMakeFiles/engine.dir/engine.c.s
 
 engine/CMakeFiles/engine.dir/engine.c.o.requires:
 
@@ -81,42 +81,18 @@ engine/CMakeFiles/engine.dir/engine.c.o.provides: engine/CMakeFiles/engine.dir/e
 engine/CMakeFiles/engine.dir/engine.c.o.provides.build: engine/CMakeFiles/engine.dir/engine.c.o
 
 
-engine/CMakeFiles/engine.dir/camera.c.o: engine/CMakeFiles/engine.dir/flags.make
-engine/CMakeFiles/engine.dir/camera.c.o: ../engine/camera.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object engine/CMakeFiles/engine.dir/camera.c.o"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/camera.c.o   -c /Users/afonso/Documents/assignment/engine/camera.c
-
-engine/CMakeFiles/engine.dir/camera.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/engine.dir/camera.c.i"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/afonso/Documents/assignment/engine/camera.c > CMakeFiles/engine.dir/camera.c.i
-
-engine/CMakeFiles/engine.dir/camera.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/engine.dir/camera.c.s"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/afonso/Documents/assignment/engine/camera.c -o CMakeFiles/engine.dir/camera.c.s
-
-engine/CMakeFiles/engine.dir/camera.c.o.requires:
-
-.PHONY : engine/CMakeFiles/engine.dir/camera.c.o.requires
-
-engine/CMakeFiles/engine.dir/camera.c.o.provides: engine/CMakeFiles/engine.dir/camera.c.o.requires
-	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/camera.c.o.provides.build
-.PHONY : engine/CMakeFiles/engine.dir/camera.c.o.provides
-
-engine/CMakeFiles/engine.dir/camera.c.o.provides.build: engine/CMakeFiles/engine.dir/camera.c.o
-
-
 engine/CMakeFiles/engine.dir/scene.c.o: engine/CMakeFiles/engine.dir/flags.make
 engine/CMakeFiles/engine.dir/scene.c.o: ../engine/scene.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object engine/CMakeFiles/engine.dir/scene.c.o"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/scene.c.o   -c /Users/afonso/Documents/assignment/engine/scene.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object engine/CMakeFiles/engine.dir/scene.c.o"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/scene.c.o   -c "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.c"
 
 engine/CMakeFiles/engine.dir/scene.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/engine.dir/scene.c.i"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/afonso/Documents/assignment/engine/scene.c > CMakeFiles/engine.dir/scene.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.c" > CMakeFiles/engine.dir/scene.c.i
 
 engine/CMakeFiles/engine.dir/scene.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/engine.dir/scene.c.s"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/afonso/Documents/assignment/engine/scene.c -o CMakeFiles/engine.dir/scene.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.c" -o CMakeFiles/engine.dir/scene.c.s
 
 engine/CMakeFiles/engine.dir/scene.c.o.requires:
 
@@ -131,16 +107,16 @@ engine/CMakeFiles/engine.dir/scene.c.o.provides.build: engine/CMakeFiles/engine.
 
 engine/CMakeFiles/engine.dir/render.c.o: engine/CMakeFiles/engine.dir/flags.make
 engine/CMakeFiles/engine.dir/render.c.o: ../engine/render.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object engine/CMakeFiles/engine.dir/render.c.o"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/render.c.o   -c /Users/afonso/Documents/assignment/engine/render.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object engine/CMakeFiles/engine.dir/render.c.o"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/render.c.o   -c "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.c"
 
 engine/CMakeFiles/engine.dir/render.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/engine.dir/render.c.i"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/afonso/Documents/assignment/engine/render.c > CMakeFiles/engine.dir/render.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.c" > CMakeFiles/engine.dir/render.c.i
 
 engine/CMakeFiles/engine.dir/render.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/engine.dir/render.c.s"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/afonso/Documents/assignment/engine/render.c -o CMakeFiles/engine.dir/render.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.c" -o CMakeFiles/engine.dir/render.c.s
 
 engine/CMakeFiles/engine.dir/render.c.o.requires:
 
@@ -155,16 +131,16 @@ engine/CMakeFiles/engine.dir/render.c.o.provides.build: engine/CMakeFiles/engine
 
 engine/CMakeFiles/engine.dir/ezxml.c.o: engine/CMakeFiles/engine.dir/flags.make
 engine/CMakeFiles/engine.dir/ezxml.c.o: ../engine/ezxml.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object engine/CMakeFiles/engine.dir/ezxml.c.o"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/ezxml.c.o   -c /Users/afonso/Documents/assignment/engine/ezxml.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object engine/CMakeFiles/engine.dir/ezxml.c.o"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/engine.dir/ezxml.c.o   -c "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.c"
 
 engine/CMakeFiles/engine.dir/ezxml.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/engine.dir/ezxml.c.i"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/afonso/Documents/assignment/engine/ezxml.c > CMakeFiles/engine.dir/ezxml.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.c" > CMakeFiles/engine.dir/ezxml.c.i
 
 engine/CMakeFiles/engine.dir/ezxml.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/engine.dir/ezxml.c.s"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/afonso/Documents/assignment/engine/ezxml.c -o CMakeFiles/engine.dir/ezxml.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.c" -o CMakeFiles/engine.dir/ezxml.c.s
 
 engine/CMakeFiles/engine.dir/ezxml.c.o.requires:
 
@@ -180,7 +156,6 @@ engine/CMakeFiles/engine.dir/ezxml.c.o.provides.build: engine/CMakeFiles/engine.
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/engine.c.o" \
-"CMakeFiles/engine.dir/camera.c.o" \
 "CMakeFiles/engine.dir/scene.c.o" \
 "CMakeFiles/engine.dir/render.c.o" \
 "CMakeFiles/engine.dir/ezxml.c.o"
@@ -189,15 +164,20 @@ engine_OBJECTS = \
 engine_EXTERNAL_OBJECTS =
 
 engine/engine: engine/CMakeFiles/engine.dir/engine.c.o
-engine/engine: engine/CMakeFiles/engine.dir/camera.c.o
 engine/engine: engine/CMakeFiles/engine.dir/scene.c.o
 engine/engine: engine/CMakeFiles/engine.dir/render.c.o
 engine/engine: engine/CMakeFiles/engine.dir/ezxml.c.o
 engine/engine: engine/CMakeFiles/engine.dir/build.make
-engine/engine: /usr/local/lib/libIL.dylib
+engine/engine: /usr/lib/x86_64-linux-gnu/libGLEW.so
+engine/engine: /usr/lib/x86_64-linux-gnu/libIL.so
+engine/engine: /usr/lib/x86_64-linux-gnu/libGLU.so
+engine/engine: /usr/lib/x86_64-linux-gnu/libGL.so
+engine/engine: /usr/lib/x86_64-linux-gnu/libglut.so
+engine/engine: /usr/lib/x86_64-linux-gnu/libXmu.so
+engine/engine: /usr/lib/x86_64-linux-gnu/libXi.so
 engine/engine: engine/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable engine"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable engine"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 engine/CMakeFiles/engine.dir/build: engine/engine
@@ -205,7 +185,6 @@ engine/CMakeFiles/engine.dir/build: engine/engine
 .PHONY : engine/CMakeFiles/engine.dir/build
 
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/engine.c.o.requires
-engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/camera.c.o.requires
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/scene.c.o.requires
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/render.c.o.requires
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/ezxml.c.o.requires
@@ -213,10 +192,10 @@ engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/ezxml.c.o.re
 .PHONY : engine/CMakeFiles/engine.dir/requires
 
 engine/CMakeFiles/engine.dir/clean:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/engine && $(CMAKE_COMMAND) -P CMakeFiles/engine.dir/cmake_clean.cmake
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" && $(CMAKE_COMMAND) -P CMakeFiles/engine.dir/cmake_clean.cmake
 .PHONY : engine/CMakeFiles/engine.dir/clean
 
 engine/CMakeFiles/engine.dir/depend:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/afonso/Documents/assignment /Users/afonso/Documents/assignment/engine /Users/afonso/Documents/assignment/cmake-build-debug /Users/afonso/Documents/assignment/cmake-build-debug/engine /Users/afonso/Documents/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : engine/CMakeFiles/engine.dir/depend
 

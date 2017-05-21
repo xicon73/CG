@@ -129,12 +129,10 @@ void render_catmull_curve(struct point *points, int npoints) {
     glEnd();
 }
 
-double TIME = 0;
-
-void render_catmull(struct point *points, int npoints) {
+void render_catmull(struct point *points, int npoints, int time) {
     if (!points) return;
 
-    double t = TIME;
+    static double t = 0;
     double res[3];
     double deriv[3];
     double p[npoints][3];
@@ -148,6 +146,7 @@ void render_catmull(struct point *points, int npoints) {
 
     glTranslated(res[0],res[1],res[2]);
     glutPostRedisplay();
+    t += 0.0001;
 }
 
 void render_transformation(struct transformation *transformation) {
@@ -172,7 +171,8 @@ void render_transformation(struct transformation *transformation) {
         if (transformation->translation.npoints > 0) {
             render_catmull_curve(transformation->translation.points, transformation->translation.npoints);
             render_catmull(transformation->translation.points,
-                           transformation->translation.npoints);
+                           transformation->translation.npoints,
+                           transformation->translation.time);
         }
     }
 
@@ -181,6 +181,13 @@ void render_transformation(struct transformation *transformation) {
 
 void render_model(struct model *model) {
     if (!model) return;
+
+    // Draw the material
+    glMaterialfv(GL_FRONT, GL_AMBIENT, model->amb);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, model->amb_diff);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, model->diff);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, model->spec);
+    glMaterialfv(GL_FRONT, GL_EMISSION, model->emiss);
 
     // Draw the texture
     glBindTexture(GL_TEXTURE_2D, model->texture_id);
@@ -213,4 +220,14 @@ void render_group(struct group *group) {
 
     glPopMatrix();
     render_group(group->sibling);
+}
+
+void render_light(struct light *light) {
+    if (!light) return;
+
+    glEnable(light->light);
+    glLightfv(light->light, GL_AMBIENT, light->amb);
+    glLightfv(light->light, GL_DIFFUSE, light->diff);
+    glLightfv(light->light, GL_POSITION, light->pos);
+
 }

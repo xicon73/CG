@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
+RM = /home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/afonso/Documents/assignment
+CMAKE_SOURCE_DIR = "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/afonso/Documents/assignment/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/afonso/Documents/assignment/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles /Users/afonso/Documents/assignment/cmake-build-debug/engine/CMakeFiles/progress.marks
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles 0
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/CMakeFiles/progress.marks"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 engine/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/clean
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 engine/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/preinstall
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 engine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/preinstall
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 engine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 engine/CMakeFiles/engine.dir/rule:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/CMakeFiles/engine.dir/rule
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f CMakeFiles/Makefile2 engine/CMakeFiles/engine.dir/rule
 .PHONY : engine/CMakeFiles/engine.dir/rule
 
 # Convenience name for target.
@@ -122,35 +122,8 @@ engine: engine/CMakeFiles/engine.dir/rule
 
 # fast build rule for target.
 engine/fast:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/build
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/build
 .PHONY : engine/fast
-
-camera.o: camera.c.o
-
-.PHONY : camera.o
-
-# target to build an object file
-camera.c.o:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/camera.c.o
-.PHONY : camera.c.o
-
-camera.i: camera.c.i
-
-.PHONY : camera.i
-
-# target to preprocess a source file
-camera.c.i:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/camera.c.i
-.PHONY : camera.c.i
-
-camera.s: camera.c.s
-
-.PHONY : camera.s
-
-# target to generate assembly for a file
-camera.c.s:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/camera.c.s
-.PHONY : camera.c.s
 
 engine.o: engine.c.o
 
@@ -158,7 +131,7 @@ engine.o: engine.c.o
 
 # target to build an object file
 engine.c.o:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/engine.c.o
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/engine.c.o
 .PHONY : engine.c.o
 
 engine.i: engine.c.i
@@ -167,7 +140,7 @@ engine.i: engine.c.i
 
 # target to preprocess a source file
 engine.c.i:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/engine.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/engine.c.i
 .PHONY : engine.c.i
 
 engine.s: engine.c.s
@@ -176,7 +149,7 @@ engine.s: engine.c.s
 
 # target to generate assembly for a file
 engine.c.s:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/engine.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/engine.c.s
 .PHONY : engine.c.s
 
 ezxml.o: ezxml.c.o
@@ -185,7 +158,7 @@ ezxml.o: ezxml.c.o
 
 # target to build an object file
 ezxml.c.o:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/ezxml.c.o
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/ezxml.c.o
 .PHONY : ezxml.c.o
 
 ezxml.i: ezxml.c.i
@@ -194,7 +167,7 @@ ezxml.i: ezxml.c.i
 
 # target to preprocess a source file
 ezxml.c.i:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/ezxml.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/ezxml.c.i
 .PHONY : ezxml.c.i
 
 ezxml.s: ezxml.c.s
@@ -203,7 +176,7 @@ ezxml.s: ezxml.c.s
 
 # target to generate assembly for a file
 ezxml.c.s:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/ezxml.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/ezxml.c.s
 .PHONY : ezxml.c.s
 
 render.o: render.c.o
@@ -212,7 +185,7 @@ render.o: render.c.o
 
 # target to build an object file
 render.c.o:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/render.c.o
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/render.c.o
 .PHONY : render.c.o
 
 render.i: render.c.i
@@ -221,7 +194,7 @@ render.i: render.c.i
 
 # target to preprocess a source file
 render.c.i:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/render.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/render.c.i
 .PHONY : render.c.i
 
 render.s: render.c.s
@@ -230,7 +203,7 @@ render.s: render.c.s
 
 # target to generate assembly for a file
 render.c.s:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/render.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/render.c.s
 .PHONY : render.c.s
 
 scene.o: scene.c.o
@@ -239,7 +212,7 @@ scene.o: scene.c.o
 
 # target to build an object file
 scene.c.o:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/scene.c.o
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/scene.c.o
 .PHONY : scene.c.o
 
 scene.i: scene.c.i
@@ -248,7 +221,7 @@ scene.i: scene.c.i
 
 # target to preprocess a source file
 scene.c.i:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/scene.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/scene.c.i
 .PHONY : scene.c.i
 
 scene.s: scene.c.s
@@ -257,7 +230,7 @@ scene.s: scene.c.s
 
 # target to generate assembly for a file
 scene.c.s:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/scene.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/scene.c.s
 .PHONY : scene.c.s
 
 # Help Target
@@ -269,9 +242,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... engine"
-	@echo "... camera.o"
-	@echo "... camera.i"
-	@echo "... camera.s"
 	@echo "... engine.o"
 	@echo "... engine.i"
 	@echo "... engine.s"
@@ -295,6 +265,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

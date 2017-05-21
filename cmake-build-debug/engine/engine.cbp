@@ -4,106 +4,102 @@
 	<Project>
 		<Option title="engine"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="clang"/>
+		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;CMake Files\engine\;CMake Files\generator\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/afonso/Documents/assignment/cmake-build-debug/engine"/>
+				<Option working_dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="engine">
-				<Option output="/Users/afonso/Documents/assignment/cmake-build-debug/engine/engine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/afonso/Documents/assignment/cmake-build-debug/engine"/>
+				<Option output="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/GLUT.framework/Headers"/>
-					<Add directory="/Users/afonso/Documents/assignment/engine/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 engine"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 engine"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="engine/fast">
-				<Option output="/Users/afonso/Documents/assignment/cmake-build-debug/engine/engine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/afonso/Documents/assignment/cmake-build-debug/engine"/>
+				<Option output="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="clang"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/GLUT.framework/Headers"/>
-					<Add directory="/Users/afonso/Documents/assignment/engine/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ยง{IL_INCLUDE_DIR}"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 engine/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/afonso/Documents/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 engine/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/afonso/Documentos/Licenciatura\ em\ Engenharia\ Informática/Computação\ Gráfica/assignment/cmake-build-debug/engine/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/camera.c">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/engine.c">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/camera.h">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.c">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/engine.c">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/ezxml.c">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.c">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/ezxml.h">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/render.c">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.c">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/render.h">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/scene.c">
-			<Option target="engine"/>
-		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/scene.h">
-			<Option target="engine"/>
-		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/CMakeLists.txt">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/CMakeLists.txt">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\engine\"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/engine/CMakeLists.txt">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\engine\"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/generator/CMakeLists.txt">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\generator\"/>
 		</Unit>
-		<Unit filename="/Users/afonso/Documents/assignment/generator/CMakeLists.txt">
+		<Unit filename="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\generator\"/>
 		</Unit>
 	</Project>

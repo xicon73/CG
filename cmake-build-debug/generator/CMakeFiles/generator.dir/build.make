@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
+RM = /home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/afonso/Documents/assignment
+CMAKE_SOURCE_DIR = "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/afonso/Documents/assignment/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include generator/CMakeFiles/generator.dir/depend.make
@@ -59,16 +59,16 @@ include generator/CMakeFiles/generator.dir/flags.make
 
 generator/CMakeFiles/generator.dir/generator.c.o: generator/CMakeFiles/generator.dir/flags.make
 generator/CMakeFiles/generator.dir/generator.c.o: ../generator/generator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object generator/CMakeFiles/generator.dir/generator.c.o"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/generator.dir/generator.c.o   -c /Users/afonso/Documents/assignment/generator/generator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object generator/CMakeFiles/generator.dir/generator.c.o"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/generator.dir/generator.c.o   -c "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/generator.c"
 
 generator/CMakeFiles/generator.dir/generator.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/generator.dir/generator.c.i"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/afonso/Documents/assignment/generator/generator.c > CMakeFiles/generator.dir/generator.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/generator.c" > CMakeFiles/generator.dir/generator.c.i
 
 generator/CMakeFiles/generator.dir/generator.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/generator.dir/generator.c.s"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/afonso/Documents/assignment/generator/generator.c -o CMakeFiles/generator.dir/generator.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/generator.c" -o CMakeFiles/generator.dir/generator.c.s
 
 generator/CMakeFiles/generator.dir/generator.c.o.requires:
 
@@ -83,16 +83,16 @@ generator/CMakeFiles/generator.dir/generator.c.o.provides.build: generator/CMake
 
 generator/CMakeFiles/generator.dir/model.c.o: generator/CMakeFiles/generator.dir/flags.make
 generator/CMakeFiles/generator.dir/model.c.o: ../generator/model.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object generator/CMakeFiles/generator.dir/model.c.o"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/generator.dir/model.c.o   -c /Users/afonso/Documents/assignment/generator/model.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object generator/CMakeFiles/generator.dir/model.c.o"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/generator.dir/model.c.o   -c "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/model.c"
 
 generator/CMakeFiles/generator.dir/model.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/generator.dir/model.c.i"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/afonso/Documents/assignment/generator/model.c > CMakeFiles/generator.dir/model.c.i
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/model.c" > CMakeFiles/generator.dir/model.c.i
 
 generator/CMakeFiles/generator.dir/model.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/generator.dir/model.c.s"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/afonso/Documents/assignment/generator/model.c -o CMakeFiles/generator.dir/model.c.s
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/model.c" -o CMakeFiles/generator.dir/model.c.s
 
 generator/CMakeFiles/generator.dir/model.c.o.requires:
 
@@ -117,8 +117,8 @@ generator/generator: generator/CMakeFiles/generator.dir/generator.c.o
 generator/generator: generator/CMakeFiles/generator.dir/model.c.o
 generator/generator: generator/CMakeFiles/generator.dir/build.make
 generator/generator: generator/CMakeFiles/generator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/afonso/Documents/assignment/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable generator"
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/generator.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable generator"
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/generator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 generator/CMakeFiles/generator.dir/build: generator/generator
@@ -131,10 +131,10 @@ generator/CMakeFiles/generator.dir/requires: generator/CMakeFiles/generator.dir/
 .PHONY : generator/CMakeFiles/generator.dir/requires
 
 generator/CMakeFiles/generator.dir/clean:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug/generator && $(CMAKE_COMMAND) -P CMakeFiles/generator.dir/cmake_clean.cmake
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" && $(CMAKE_COMMAND) -P CMakeFiles/generator.dir/cmake_clean.cmake
 .PHONY : generator/CMakeFiles/generator.dir/clean
 
 generator/CMakeFiles/generator.dir/depend:
-	cd /Users/afonso/Documents/assignment/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/afonso/Documents/assignment /Users/afonso/Documents/assignment/generator /Users/afonso/Documents/assignment/cmake-build-debug /Users/afonso/Documents/assignment/cmake-build-debug/generator /Users/afonso/Documents/assignment/cmake-build-debug/generator/CMakeFiles/generator.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/generator/CMakeFiles/generator.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : generator/CMakeFiles/generator.dir/depend
 

@@ -1,2 +1,2 @@
 Options: 
-CMake: 3.7.1@/Applications/CLion.app/Contents/bin/cmake/bin/cmake
+CMake: 3.7.1@/home/afonso/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/171.4073.41/bin/cmake/bin/cmake

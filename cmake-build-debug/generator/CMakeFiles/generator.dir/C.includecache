@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/afonso/Documents/assignment/generator/generator.c
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/generator.c
 stdio.h
 -
 stdlib.h
@@ -14,13 +14,13 @@ stdlib.h
 string.h
 -
 model.h
-/Users/afonso/Documents/assignment/generator/model.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/model.h
 
-/Users/afonso/Documents/assignment/generator/model.c
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/model.c
 model.h
-/Users/afonso/Documents/assignment/generator/model.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/model.h
 
-/Users/afonso/Documents/assignment/generator/model.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/generator/model.h
 assert.h
 -
 math.h

@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/engine.c.o"
-  "CMakeFiles/engine.dir/camera.c.o"
   "CMakeFiles/engine.dir/scene.c.o"
   "CMakeFiles/engine.dir/render.c.o"
   "CMakeFiles/engine.dir/ezxml.c.o"

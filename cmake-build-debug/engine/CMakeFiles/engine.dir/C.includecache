@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/afonso/Documents/assignment/engine/camera.c
-camera.h
-/Users/afonso/Documents/assignment/engine/camera.h
-
-/Users/afonso/Documents/assignment/engine/camera.h
-math.h
--
-
-/Users/afonso/Documents/assignment/engine/engine.c
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/engine.c
 GLUT/glut.h
 -
 GL/glew.h
@@ -25,14 +17,12 @@ stdio.h
 -
 stdlib.h
 -
-camera.h
-/Users/afonso/Documents/assignment/engine/camera.h
 render.h
-/Users/afonso/Documents/assignment/engine/render.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.h
 scene.h
-/Users/afonso/Documents/assignment/engine/scene.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.h
 
-/Users/afonso/Documents/assignment/engine/ezxml.c
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.c
 stdlib.h
 -
 stdio.h
@@ -52,9 +42,9 @@ sys/mman.h
 sys/stat.h
 -
 ezxml.h
-/Users/afonso/Documents/assignment/engine/ezxml.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.h
 
-/Users/afonso/Documents/assignment/engine/ezxml.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.h
 stdlib.h
 -
 stdio.h
@@ -64,11 +54,11 @@ stdarg.h
 fcntl.h
 -
 
-/Users/afonso/Documents/assignment/engine/render.c
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.c
 render.h
-/Users/afonso/Documents/assignment/engine/render.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.h
 
-/Users/afonso/Documents/assignment/engine/render.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.h
 GLUT/glut.h
 -
 GL/glew.h
@@ -80,13 +70,13 @@ IL/il.h
 math.h
 -
 scene.h
-/Users/afonso/Documents/assignment/engine/scene.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.h
 
-/Users/afonso/Documents/assignment/engine/scene.c
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.c
 scene.h
-/Users/afonso/Documents/assignment/engine/scene.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.h
 
-/Users/afonso/Documents/assignment/engine/scene.h
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.h
 GLUT/glut.h
 -
 GL/glew.h
@@ -102,37 +92,5 @@ stdlib.h
 string.h
 -
 ezxml.h
-/Users/afonso/Documents/assignment/engine/ezxml.h
-
-/usr/local/include/GL/freeglut_std.h
-windows.h
--
-EGL/egl.h
--
-GLES/gl.h
--
-GLES2/gl2.h
--
-OpenGL/gl.h
--
-OpenGL/glu.h
--
-GL/gl.h
--
-GL/glu.h
--
-stdlib.h
--
-
-/usr/local/include/GL/glut.h
-freeglut_std.h
-/usr/local/include/GL/freeglut_std.h
-
-/usr/local/include/IL/il.h
-stdio.h
--
-limits.h
--
-wchar.h
--
+/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.h
 

@@ -28,6 +28,8 @@ struct model *model_new_ellipsoid(double r1, double r2, double r3,
 
 struct model *model_new_sphere(double radius, int stacks, int slices);
 
+struct model *model_new_torus(double radius_1, double radius_2, int stacks, int slices);
+
 struct model *model_new_bezier(int tesselation, FILE *patches);
 
 void model_free(struct model *model);

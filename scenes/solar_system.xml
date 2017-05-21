@@ -1,35 +1,57 @@
 <scene>
+  <lights>
+     <light type="POINT" posX="0" posY="2" posZ="0"
+             ambR="0.2" ambG="0.2" ambB="0.2"
+             diffR="1" diffG="1" diffB="1"/>
+  </lights>
   <group>
     <!-- Sun -->
     <group>
+      <scale x="1.5" y="1.5" z="1.5"/>
       <models>
-        <model file="sphere.3d" texture="textures/sun.jpg"/>
+        <model file="sphere.3d" emissR="1" emissG="1" emissB="1" texture="textures/sun.jpg"/>
       </models>
+    </group>
+
+    <!-- Comet -->
+    <group>
+        <translate>
+            <point x="0" y="-2" z="-6"/>
+            <point x="-6" y="-2" z="0"/>
+            <point x="0" y="0" z="8"/>
+            <point x="4" y="2" z="4"/>
+            <point x="4" y="0" z="0"/>
+        </translate>
+        <scale x="0.1" y="0.1" z="0.1"/>
+        <models>
+            <model file="teapot.3d" ambR="0" ambG="0" ambB="1"/>
+        </models>
     </group>
 
     <!-- Mercury -->
     <group>
-        <translate>
-            <point x="0" y="0" z="3" />
+        <translate time="2000">
+            <point x="0" y="0" z="3"/>
             <point x="3" y="0" z="0"/>
-            <point x="0" y="0" z="-3" />
+            <point x="0" y="0" z="-3"/>
             <point x="-3" y="0" z="0"/>
         </translate>
+        <rotate time="10000" y="1"/>
         <scale x="0.2" y="0.2" z="0.2"/>
         <models>
             <model file="sphere.3d" texture="textures/mercury.jpg"/>
         </models>
-        <rotate time="5000" y="1"/>
     </group>
 
     <!-- Venus -->
     <group>
         <translate>
-            <point x="0" y="0" z="4" />
-            <point x="4" y="0" z="0"/>
-            <point x="0" y="0" z="-4" />
             <point x="-4" y="0" z="0"/>
+            <point x="0" y="0" z="4"/>
+            <point x="4" y="0" z="0"/>
+            <point x="0" y="0" z="-4"/>
         </translate>
+        <rotate time="10000" y="1"/>
         <scale x="0.3" y="0.3" z="0.3"/>
         <models>
             <model file="sphere.3d" texture="textures/venus.jpg"/>
@@ -38,17 +60,27 @@
 
     <!-- Earth -->
     <group>
-        <rotate y="1"/>
-        <rotate x="1" angle="180"/>
-        <translate x="6"/>
+        <translate>
+            <point x="0" y="0" z="-5"/>
+            <point x="-5" y="0" z="0"/>
+            <point x="0" y="0" z="5"/>
+            <point x="5" y="0" z="0"/>
+        </translate>
+        <rotate time="10000" y="1"/>
         <scale x="0.4" y="0.4" z="0.4"/>
         <models>
             <model file="sphere.3d" texture="textures/earth.jpg"/>
         </models>
+
         <!-- Moon -->
         <group>
-          <rotate y="1"/>
-          <translate x="2"/>
+          <rotate time="10000" y="1"/>
+          <translate>
+              <point x="0" y="-1.5" z="0"/>
+              <point x="-1.5" y="0" z="0"/>
+              <point x="0" y="1.5" z="0"/>
+              <point x="1.5" Y="0" z="0"/>
+          </translate>
           <scale x="0.2" y="0.2" z="0.2"/>
           <models>
             <model file="sphere.3d" texture="textures/moon.jpg"/>
@@ -58,18 +90,23 @@
 
     <!-- Mars -->
     <group>
-        <rotate y="1"/>
-        <translate x="8"/>
+        <translate>
+            <point x="6" y="0" z="0"/>
+            <point x="0" y="0" z="-6"/>
+            <point x="-6" y="0" z="0"/>
+            <point x="0" y="0" z="6"/>
+        </translate>
         <scale x="0.3" y="0.3" z="0.3"/>
+        <rotate time="10000" y="1"/>
         <models>
             <model file="sphere.3d" texture="textures/mars.jpg"/>
         </models>
     </group>
 
     <!-- Astheroid field -->
-    <group repeat="200">
+    <group repeat="50">
         <rotate time="40000" angleMin="0" angleMax="360" y="1"/>
-        <translate xMin="9.5" xMax="11" yMin="-0.5" yMax="0.5"/>
+        <translate xMin="6.5" xMax="8" yMin="-0.5" yMax="0.5"/>
         <scale xMin="0.01" xMax="0.05" yMin="0.01" yMax="0.05" zMin="0.01" zMax="0.05"/>
         <models>
             <model file="sphere.3d" texture="textures/astheroid.jpg"/>
@@ -78,9 +115,14 @@
 
     <!-- Jupiter -->
     <group>
-        <rotate y="1"/>
-        <translate x="12"/>
+        <translate time="2000">
+            <point x="0" y="0" z="9"/>
+            <point x="9" y="0" z="0"/>
+            <point x="0" y="0" z="-9"/>
+            <point x="-9" y="0" z="0"/>
+        </translate>
         <scale x="0.6" y="0.6" z="0.6"/>
+        <rotate time="10000" y="1"/>
         <models>
             <model file="sphere.3d" texture="textures/jupiter.jpg"/>
         </models>
@@ -88,18 +130,36 @@
 
     <!-- Saturn -->
     <group>
-        <rotate y="1"/>
-        <translate x="15"/>
-        <scale x="0.5" y="0.5" z="0.5"/>
+        <translate time="2000">
+            <point x="-11" y="0" z="0"/>
+            <point x="0" y="0" z="11"/>
+            <point x="11" y="0" z="0"/>
+            <point x="0" y="0" z="-11"/>
+        </translate>
+        <rotate y="1" x="1" angle="25"/>
+        <rotate time="10000" y="1"/>
+        <scale x="0.4" y="0.4" z="0.4"/>
         <models>
             <model file="sphere.3d" texture="textures/saturn.jpg"/>
         </models>
+        <!-- Ring -->
+        <group>
+            <scale y="0.25"/>
+            <models>
+                <model file="torus.3d" texture="textures/saturn_ring.jpg"/>
+            </models>
+        </group>
     </group>
 
     <!-- Uranus -->
     <group>
-        <rotate y="1"/>
-        <translate x="17"/>
+        <translate time="2000">
+            <point x="13" y="0" z="0"/>
+            <point x="0" y="0" z="-13"/>
+            <point x="-13" y="0" z="0"/>
+            <point x="0" y="0" z="13"/>
+        </translate>
+        <rotate time="10000" y="1"/>
         <scale x="0.4" y="0.4" z="0.4"/>
         <models>
             <model file="sphere.3d" texture="textures/uranus.jpg"/>
@@ -108,12 +168,18 @@
 
     <!-- Neptune -->
     <group>
-        <rotate y="1"/>
-        <translate x="19"/>
+        <translate time="2000">
+            <point x="0" y="0" z="-15"/>
+            <point x="-15" y="0" z="0"/>
+            <point x="0" y="0" z="15"/>
+            <point x="15" y="0" z="0"/>
+        </translate>
+        <rotate time="10000" y="1"/>
         <scale x="0.4" y="0.4" z="0.4"/>
         <models>
             <model file="sphere.3d" texture="textures/neptune.jpg"/>
         </models>
     </group>
+    <!-- Pluto-->
   </group>
 </scene>

@@ -4,19 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/afonso/Documents/assignment/engine/camera.c" "/Users/afonso/Documents/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/camera.c.o"
-  "/Users/afonso/Documents/assignment/engine/engine.c" "/Users/afonso/Documents/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/engine.c.o"
-  "/Users/afonso/Documents/assignment/engine/ezxml.c" "/Users/afonso/Documents/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/ezxml.c.o"
-  "/Users/afonso/Documents/assignment/engine/render.c" "/Users/afonso/Documents/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/render.c.o"
-  "/Users/afonso/Documents/assignment/engine/scene.c" "/Users/afonso/Documents/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/scene.c.o"
+  "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/engine.c" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/engine.c.o"
+  "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/ezxml.c" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/ezxml.c.o"
+  "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/render.c" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/render.c.o"
+  "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/engine/scene.c" "/home/afonso/Documentos/Licenciatura em Engenharia Informática/Computação Gráfica/assignment/cmake-build-debug/engine/CMakeFiles/engine.dir/scene.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/GLUT.framework/Headers"
   "../engine/ยง{IL_INCLUDE_DIR}"
-  "/usr/local/include"
   )
 
 # Targets to which this target links.

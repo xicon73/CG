@@ -49,6 +49,7 @@ struct model {
     int nvertices;
     GLuint vertices, normals, texture;
     GLuint texture_id;
+    GLfloat amb[4], amb_diff[4], diff[4], spec[4], emiss[4];
     struct model *next;
 };
 
@@ -60,8 +61,15 @@ struct group {
     struct group *child, *sibling;
 };
 
+struct light {
+    GLenum light;
+    GLfloat amb[4], diff[4], pos[4];
+    struct light *next;
+};
+
 struct scene {
     struct group *root;
+    struct light *lights;
 };
 
 struct scene scene_load(FILE *fp);

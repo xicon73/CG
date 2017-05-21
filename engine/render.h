@@ -17,6 +17,7 @@
 
 extern double TIME;
 
+void render_light(struct light *light);
 void render_group(struct group *group);
 
 #endif //PROJECT_RENDER_H

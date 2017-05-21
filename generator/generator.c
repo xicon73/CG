@@ -35,8 +35,9 @@ int main(int argc, char *argv[]) {
         double inner_radius = atof(argv[2]);
         double out_radius = atof(argv[3]);
         int stacks = atoi(argv[4]);
+        int slices = atoi(argv[5]);
 
-        //m = model_torus(inner_radius, out_radius, stacks);
+        m = model_new_torus(inner_radius, out_radius, stacks, slices);
     } else if (argc >= 8 && strcmp("ellipsoid", argv[1]) == 0) {
         double r1 = atof(argv[2]);
         double r2 = atof(argv[3]);

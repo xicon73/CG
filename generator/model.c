@@ -74,6 +74,46 @@ struct model *model_new_sphere(double radius, int stacks, int slices) {
     return model_new_ellipsoid(radius, radius, radius, stacks, slices);
 }
 
+struct vertex torus_param(double r1, double r2, double theta, double phi) {
+    double px = (r2 + r1 * cos(theta)) * sin(phi);
+    double py = r1 * sin(theta);
+    double pz = (r2 + r1 * cos(theta)) * cos(phi);
+
+    double nx = cos(theta) * sin(phi);
+    double ny = sin(theta);
+    double nz = cos(theta) * cos(phi);
+
+    double s = acos(py / r2) / (2 * M_PI);
+    double t = acos(py / (r2 + r1 * cos(2 * M_PI * s))) * 2 * M_PI;
+
+    return (struct vertex) { px, py, pz, nx, ny, nz, s, t };
+}
+
+struct model *model_new_torus(double r1, double r2, int stacks, int slices) {
+    struct model *m = model_new(2 * 3 * stacks * slices, NULL);
+
+    if (!m) {
+        return NULL;
+    }
+
+    size_t i = 0;
+    double theta_step = M_PI / stacks, phi_step = 2 * M_PI / slices;
+
+    for (double theta = -M_PI_2; theta < M_PI_2; theta += theta_step) {
+        for (double phi = -M_PI; phi < M_PI; phi += phi_step) {
+            m->vertices[i++] = torus_param(r1, r2, theta, phi);
+            m->vertices[i++] = torus_param(r1, r2, theta, phi + phi_step);
+            m->vertices[i++] = torus_param(r1, r2, theta + theta_step, phi + phi_step);
+
+            m->vertices[i++] = torus_param(r1, r2, theta, phi);
+            m->vertices[i++] = torus_param(r1, r2, theta + theta_step, phi + phi_step);
+            m->vertices[i++] = torus_param(r1, r2, theta + theta_step, phi);
+        }
+    }
+
+    return m;
+}
+
 /* Xico*/
 
 struct vertex **lerPatches(FILE *fp, int *numero) {

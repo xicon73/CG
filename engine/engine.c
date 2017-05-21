@@ -7,12 +7,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "camera.h"
 #include "render.h"
 #include "scene.h"
 
 struct scene SCENE = {};
-struct camera CAMERA = {};
+float camX = 00, camY = 30, camZ = 40;
+int startX, startY, tracking = 0;
+
+float alpha = 0, beta = 35, r = 10;
+
 
 void change_size(int w, int h) {
     float ratio;
@@ -41,85 +44,114 @@ void render_scene() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
 
-    gluLookAt(CAMERA.x, CAMERA.y, CAMERA.z,
-              CAMERA.la_x, CAMERA.la_y, CAMERA.la_z,
-              0.0, 1.0, 0.0);
+    gluLookAt(camX, camY, camZ,
+              0.0,0.0,0.0,
+              0.0f,1.0f,0.0f);
 
-    // Light
-    GLfloat amb[4] =  { 0.2, 0.2, 0.2, 1.0 };
-    GLfloat diff[4] = { 1.0, 1.0, 1.0, 1.0 };
-    GLfloat posl[4] = { 0.0, 0.0 ,1.0, 0.0 };
-
-    glLightfv(GL_LIGHT0, GL_POSITION, posl);
-    glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
-
-    // Material
-    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, (float[]) { 1, 1, 1, 1 });
-
+    render_light(SCENE.lights);
     render_group(SCENE.root);
 
     // Reset texture loading
     glBindTexture(GL_TEXTURE_2D, 0);
+
+    // Update FPS
+    static int frame = 0;
+    static double time = 0, timebase = 0;
+    frame++;
+    time = glutGet(GLUT_ELAPSED_TIME);
+
+    if (time - timebase > 1000) {
+        char s[64];
+        sprintf(s,"FPS:%4.2f", frame * 1000.0 / (time - timebase));
+        timebase = time;
+        frame = 0;
+        glutSetWindowTitle(s);
+    }
+
     glutSwapBuffers();
-    TIME += 0.001;
 }
 
 // Mouse and keyborad functions
 void process_keys(unsigned char key, int x, int y) {
-    switch (key) {
-        case 'w':
-            CAMERA = camera_zoom(CAMERA, -0.1);
-            break;
-        case 's':
-            CAMERA = camera_zoom(CAMERA, +0.1);
-            break;
-        case 'a':
-            CAMERA = camera_rotate(CAMERA, -0.1);
-            break;
-        case 'd':
-            CAMERA = camera_rotate(CAMERA, +0.1);
-            break;
-        case '+':
-            CAMERA = camera_zoom(CAMERA, -0.5);
-            break;
-        case '-':
-            CAMERA = camera_zoom(CAMERA, +0.5);
-            break;
-        default:
-            break;
-    }
-
     glutPostRedisplay();
 }
 
 void process_special_keys(int key, int x, int y) {
-    switch (key) {
-        case GLUT_KEY_LEFT:
-            CAMERA = camera_rotate(CAMERA, -0.1);
-            break;
-        case GLUT_KEY_RIGHT:
-            CAMERA = camera_rotate(CAMERA, 0.1);
-            break;
-        case GLUT_KEY_UP:
-            CAMERA = camera_incline(CAMERA, 0.1);
-            break;
-        case GLUT_KEY_DOWN:
-            CAMERA = camera_incline(CAMERA, -0.1);
-            break;
-        default:
-            break;
+    glutPostRedisplay();
+}
+
+void process_mouse_buttons(int button, int state, int xx, int yy) {
+    if (state == GLUT_DOWN)  {
+        startX = xx;
+        startY = yy;
+        if (button == GLUT_LEFT_BUTTON)
+            tracking = 1;
+        else if (button == GLUT_RIGHT_BUTTON)
+            tracking = 2;
+        else { // Middle button
+            tracking = 0;
+            /*picked = picking(xx,yy);
+
+            if (picked)
+                printf("Picked Snowman number %d\n", picked);
+            else
+                printf("Nothing selected\n");*/
+            glutPostRedisplay();
+        }
     }
+    else if (state == GLUT_UP) {
+        if (tracking == 1) {
+            alpha += (xx - startX);
+            beta += (yy - startY);
+        }
+        else if (tracking == 2) {
+
+            r -= yy - startY;
+            if (r < 3)
+                r = 3.0;
+        }
+        tracking = 0;
+    }
+}
+
+
+void process_mouse_motion(int xx, int yy) {
+    int deltaX, deltaY;
+    int alphaAux, betaAux;
+    int rAux;
+
+    if (!tracking)
+        return;
+
+    deltaX = xx - startX;
+    deltaY = yy - startY;
+
+    if (tracking == 1) {
+        alphaAux = alpha + deltaX;
+        betaAux = beta + deltaY;
+
+        if (betaAux > 85.0)
+            betaAux = 85.0;
+        else if (betaAux < -85.0)
+            betaAux = -85.0;
+
+        rAux = r;
+    }
+    else if (tracking == 2) {
+
+        alphaAux = alpha;
+        betaAux = beta;
+        rAux = r - deltaY;
+        if (rAux < 3)
+            rAux = 3;
+    }
+    camX = rAux * sin(alphaAux * 3.14 / 180.0) * cos(betaAux * 3.14 / 180.0);
+    camZ = rAux * cos(alphaAux * 3.14 / 180.0) * cos(betaAux * 3.14 / 180.0);
+    camY = rAux * 							     sin(betaAux * 3.14 / 180.0);
 
     glutPostRedisplay();
 }
 
-void process_mouse_buttons(int button, int state, int x, int y) {
-
-}
-
-void process_mouse_motion(int x, int y) {
-}
 
 int main(int argc, char *argv[]) {
     // Start the OpenGL engine
@@ -144,10 +176,14 @@ int main(int argc, char *argv[]) {
     glEnableClientState(GL_NORMAL_ARRAY);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 
+    camX = r * sin(alpha * 3.14 / 180.0) * cos(beta * 3.14 / 180.0);
+    camZ = r * cos(alpha * 3.14 / 180.0) * cos(beta * 3.14 / 180.0);
+    camY = r * 							   sin(beta * 3.14 / 180.0);
+
     glClearColor(0, 0, 0, 0);
 
     glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
+  //  glEnable(GL_LIGHT0);
     glEnable(GL_TEXTURE_2D);
 
     // Init DEVIL
@@ -175,7 +211,6 @@ int main(int argc, char *argv[]) {
     }
 
     SCENE = scene_load(fp);
-    CAMERA = camera_new(0, 35, 10);
 
     glutMainLoop();
 

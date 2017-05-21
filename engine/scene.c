@@ -54,7 +54,7 @@ struct point *point_load(ezxml_t node, int *npoints) {
 }
 
 struct translation translation_load(ezxml_t node) {
-    double time = number_load(node, "time", "timeMin", "timeMax", 0);
+    double time = number_load(node, "time", "timeMin", "timeMax", 1);
     double x = number_load(node, "x", "xMin", "xMax", 0);
     double y = number_load(node, "y", "yMin", "yMax", 0);
     double z = number_load(node, "z", "zMin", "zMax", 0);
@@ -162,6 +162,36 @@ struct model *model_load(ezxml_t node) {
     glBindBuffer(GL_ARRAY_BUFFER, model->texture);
     glBufferData(GL_ARRAY_BUFFER, sizeof(textures), textures, GL_STATIC_DRAW);
 
+    // Load the model materal
+    model->amb[0] = atof(ezxml_attr(node, "ambR") ?: "1");
+    model->amb[1] = atof(ezxml_attr(node, "ambG") ?: "1");
+    model->amb[2] = atof(ezxml_attr(node, "ambB") ?: "1");
+    model->amb[3] = 1;
+
+    // Load ambient diffuse component
+    model->amb_diff[0] = atof(ezxml_attr(node, "ambDiffR") ?: "1");
+    model->amb_diff[1] = atof(ezxml_attr(node, "ambDiffG") ?: "1");
+    model->amb_diff[2] = atof(ezxml_attr(node, "ambDiffB") ?: "1");
+    model->amb_diff[3] = 1;
+
+    // Load diffuse component
+    model->diff[0] = atof(ezxml_attr(node, "diffR") ?: "1");
+    model->diff[1] = atof(ezxml_attr(node, "diffG") ?: "1");
+    model->diff[2] = atof(ezxml_attr(node, "diffB") ?: "1");
+    model->diff[3] = 1;
+
+    // Load specular component
+    model->spec[0] = atof(ezxml_attr(node, "specR") ?: "1");
+    model->spec[1] = atof(ezxml_attr(node, "specG") ?: "1");
+    model->spec[2] = atof(ezxml_attr(node, "specB") ?: "1");
+    model->spec[3] = 1;
+
+    // Load emissive component
+    model->emiss[0] = atof(ezxml_attr(node, "emissR") ?: "0");
+    model->emiss[1] = atof(ezxml_attr(node, "emissG") ?: "0");
+    model->emiss[2] = atof(ezxml_attr(node, "emissB") ?: "0");
+    model->emiss[3] = 1;
+
     // Load next model
     model->next = model_load(node->next);
 
@@ -200,10 +230,44 @@ struct group *group_load(ezxml_t node) {
     return group;
 }
 
+struct light *lights_load(ezxml_t node) {
+    GLenum LIGHTS[] = { GL_LIGHT0, GL_LIGHT1, GL_LIGHT2, GL_LIGHT3,
+                        GL_LIGHT4, GL_LIGHT5, GL_LIGHT6, GL_LIGHT7 };
+    static int i = 0;
+    if (!node) return NULL;
+
+    struct light *light = calloc(1, sizeof(struct light));
+    light->light = LIGHTS[i++];
+
+    // Load ambient component
+    light->amb[0] = atof(ezxml_attr(node, "ambR") ?: "0");
+    light->amb[1] = atof(ezxml_attr(node, "ambG") ?: "0");
+    light->amb[2] = atof(ezxml_attr(node, "ambB") ?: "0");
+    light->amb[3] = 1;
+
+    // Load diffuse component
+    light->diff[0] = atof(ezxml_attr(node, "diffR") ?: "0");
+    light->diff[1] = atof(ezxml_attr(node, "diffG") ?: "0");
+    light->diff[2] = atof(ezxml_attr(node, "diffB") ?: "0");
+    light->diff[3] = 1;
+
+    // Load position
+    light->pos[0] = atof(ezxml_attr(node, "posX") ?: "0");
+    light->pos[1] = atof(ezxml_attr(node, "posY") ?: "0");
+    light->pos[2] = atof(ezxml_attr(node, "posZ") ?: "0");
+    light->pos[3] = 0;
+
+
+    light->next = lights_load(node->next);
+
+    return light;
+}
+
 struct scene scene_load(FILE *fp) {
     struct scene scene = {};
     ezxml_t tree = ezxml_parse_fp(fp);
 
+    scene.lights = lights_load(ezxml_get(tree, "lights", 0, "light", -1));
     scene.root = group_load(ezxml_child(tree, "group"));
 
     ezxml_free(tree);
